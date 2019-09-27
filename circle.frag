@@ -16,7 +16,7 @@ void main() {
 
     float remainder = mod(uTime, M_PI);
 
-    float red = sin((M_PI / 2.0) - 1.0);
+    float red = sin(remainder);
 
     //TODO: Fill this in.  The center should move in an arc from the left of the screen
     //to the right of the screen
