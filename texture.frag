@@ -19,10 +19,10 @@ void main() {
     float y = v_texture.y;
 
     //Straight texture map
-    gl_FragColor = texture2D(uSampler, v_texture);
+    // gl_FragColor = texture2D(uSampler, v_texture);
 
     // Rotate in a circle around upper left    
-    //gl_FragColor = texture2D(uSampler, vec2(c*x-s*y, s*x+c*y));
+    gl_FragColor = texture2D(uSampler, vec2(c*x-s*y, s*x+c*y));
 
     // Translate in a circle around the center
     //gl_FragColor = texture2D(uSampler, vec2(x + c, y + s));

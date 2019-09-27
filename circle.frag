@@ -13,7 +13,12 @@ uniform float uRadius; // Radius of blob
 varying vec2 v_position;
 
 void main() {
+
+    float remainder = mod(uTime, M_PI);
+
+    float red = sin((M_PI / 2.0) - 1.0);
+
     //TODO: Fill this in.  The center should move in an arc from the left of the screen
     //to the right of the screen
-    gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+    gl_FragColor = vec4(red, 0.0, 0.0, 1.0);
 }
