@@ -15,10 +15,12 @@ varying vec2 v_position;
 void main() {
 
     float remainder = mod(uTime, M_PI);
+   
+    vec2 position = vec2(-cos(remainder), sin(remainder));
+    vec2 distance = position - v_position;
 
     float red = sin(remainder);
+    float yellow = exp(-(dot(distance, distance)) / (uRadius * uRadius));
 
-    //TODO: Fill this in.  The center should move in an arc from the left of the screen
-    //to the right of the screen
-    gl_FragColor = vec4(red, 0.0, 0.0, 1.0);
+    gl_FragColor = vec4(red, yellow, 0.0, 1.0);
 }
