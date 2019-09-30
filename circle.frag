@@ -16,11 +16,21 @@ void main() {
 
     float remainder = mod(uTime, M_PI);
    
-    vec2 position = vec2(-cos(remainder), sin(remainder));
-    vec2 distance = position - v_position;
+    vec2 center = vec2(-cos(remainder), sin(remainder));
+    vec2 distance = center - v_position;
 
     float red = sin(remainder);
     float yellow = exp(-(dot(distance, distance)) / (uRadius * uRadius));
 
     gl_FragColor = vec4(red, yellow, 0.0, 1.0);
+
+    // vec2 c = vec2(cos(uTime), 0.5);
+    // vec2 dR = v_position - c;
+
+    // if (dot(dR, dR) <= uRadius * uRadius) {
+    //     gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0);
+    // } else {
+    //     gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+    // }
+
 }
