@@ -16,11 +16,9 @@ void main() {
     float mag = dot(v_position, v_position);
 
     float red = sin(uTime) + mag*1.5;
-    float yellow = sin(mag) + cos(uTime);
+    float green = sin(mag) + cos(uTime);
     float blue = cos(mag);
     float alpha = sin(uTime + mag);
 
-    gl_FragColor = vec4(red, yellow, blue, alpha);
-
-
+    gl_FragColor = vec4(red, green, blue, alpha);
 }
