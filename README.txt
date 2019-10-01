@@ -1,4 +1,3 @@
-
 1 - Dalton Rothenberger
 
 2 - "I consent to have my art contest submission posted publicly on the class web site. My name/pseudonym for public display is Dalton Rothenberger
