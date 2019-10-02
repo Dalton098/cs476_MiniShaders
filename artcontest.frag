@@ -21,5 +21,4 @@ void main() {
     float alpha = sin(uTime + mag);
 
     gl_FragColor = vec4(red, green, blue, alpha);
-
 }
