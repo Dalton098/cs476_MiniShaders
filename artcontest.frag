@@ -15,7 +15,7 @@ void main() {
 
     float mag = dot(v_position, v_position);
 
-    float red = sin(uTime) + mag*1.5;
+    float red = sin(uTime) + mag * 1.5;
     float green = sin(mag) + cos(uTime);
     float blue = cos(mag);
     float alpha = sin(uTime + mag);
